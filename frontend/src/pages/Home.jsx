@@ -69,57 +69,19 @@ const Home = () => {
       </Helmet>
 
       {/* HERO SECTION */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        {/* Animated Background Elements */}
-        <div className="absolute inset-0">
-          <motion.div
-            className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-blue-500/10"
-            animate={{
-              background: [
-                'linear-gradient(45deg, rgba(249, 115, 22, 0.1), rgba(59, 130, 246, 0.1))',
-                'linear-gradient(225deg, rgba(59, 130, 246, 0.1), rgba(249, 115, 22, 0.1))',
-                'linear-gradient(45deg, rgba(249, 115, 22, 0.1), rgba(59, 130, 246, 0.1))',
-              ],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: 'linear',
-            }}
-          />
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+        {/* Background Video */}
+        <video
+          className="absolute inset-0 w-full h-full object-cover"
+          src="src\img\hi.mp4" // Make sure hi.mp4 is in public/img/
+          autoPlay
+          loop
+          muted
+          playsInline
+        />
 
-          {/* Floating Elements */}
-          {[...Array(6)].map((_, i) => (
-            <motion.div
-              key={i}
-              className="absolute w-2 h-2 bg-orange-500 rounded-full opacity-20"
-              initial={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-              }}
-              animate={{
-                x: Math.random() * window.innerWidth,
-                y: Math.random() * window.innerHeight,
-              }}
-              transition={{
-                duration: 15 + Math.random() * 10,
-                repeat: Infinity,
-                repeatType: 'reverse',
-              }}
-            />
-          ))}
-        </div>
-
-        {/* Oil Rig Silhouette */}
-        <div className="absolute bottom-0 right-0 w-1/2 h-1/2 opacity-10">
-          <svg viewBox="0 0 400 300" className="w-full h-full">
-            <path
-              d="M50 250 L50 100 L60 100 L60 90 L70 90 L70 50 L80 50 L80 40 L90 40 L90 30 L120 30 L120 40 L130 40 L130 50 L140 50 L140 90 L150 90 L150 100 L160 100 L160 250"
-              fill="currentColor"
-            />
-            <rect x="70" y="250" width="80" height="30" fill="currentColor" />
-          </svg>
-        </div>
+        {/* Dark overlay for readability */}
+        <div className="absolute inset-0 bg-black/50" />
 
         {/* Content */}
         <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-6xl">
@@ -128,7 +90,7 @@ const Home = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.2 }}
           >
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6">
+            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white">
               Where Technology
               <br />
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
@@ -140,7 +102,7 @@ const Home = () => {
           </motion.div>
 
           <motion.p
-            className="text-xl sm:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto leading-relaxed"
+            className="text-xl sm:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
@@ -168,7 +130,7 @@ const Home = () => {
 
             <motion.button
               onClick={() => navigate('/portfolio')}
-              className="border-2 border-gray-600 hover:border-orange-500 text-gray-300 hover:text-white px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 transition-all duration-300 transform hover:scale-105"
+              className="border-2 border-gray-300 hover:border-orange-500 text-gray-200 hover:text-white px-8 py-4 rounded-lg font-semibold flex items-center space-x-2 transition-all duration-300 transform hover:scale-105"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
