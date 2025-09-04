@@ -37,7 +37,7 @@ const ContactForm = () => {
     setError('');
 
     try {
-      await axios.post('http://localhost:5000/api/contact/submit', formData);
+      await axios.post('https://motion-barrel.onrender.com/api/contact/submit', formData);
       setIsSubmitted(true);
       setFormData({
         name: '',
