@@ -27,7 +27,7 @@ const Services = () => {
       description:
         'Impactful video productions that build trust, highlight your company’s strengths, and communicate your brand story with clarity.',
       icon: 'video',
-      image: 'src/img/1.png',
+      image: '/image/1.png',
       features: [
         'Executive interviews & testimonials',
         'Company profile storytelling',
@@ -42,7 +42,7 @@ const Services = () => {
       description:
         'Engaging 2D/3D animations designed to train teams effectively and reinforce critical safety practices across operations.',
       icon: 'graduation-cap',
-      image: 'src/img/2.png',
+      image: '/image/2.png',
       features: [
         'Process safety training modules',
         'Compliance & regulation visuals',
@@ -57,7 +57,7 @@ const Services = () => {
       description:
         'Simplify technical concepts and showcase your products with visuals that are easy to understand and resonate with your audience.',
       icon: 'palette',
-      image: 'src/img/1.png',
+      image: '/image/3.png',
       features: [
         'Step-by-step product explainers',
         'Technical process breakdowns',
@@ -72,7 +72,7 @@ const Services = () => {
       description:
         'High-precision motion graphics and visualizations that bring complex Oil & Gas systems to life with clarity and depth.',
       icon: 'calendar',
-      image: 'src/img/4.png',
+      image: '/image/4.png',
       features: [
         '3D asset design & modeling',
         'Pipeline & plant visualization',
@@ -87,7 +87,7 @@ const Services = () => {
       description:
         'Stunning websites and digital campaigns that amplify your brand presence and connect you with the right audience.',
       icon: 'shield',
-      image: 'src/img/5.png',
+      image: '/image/5.png',
       features: [
         'Custom website design',
         'Digital marketing campaigns',

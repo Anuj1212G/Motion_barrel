@@ -73,7 +73,7 @@ const Home = () => {
         {/* Background Video */}
         <video
           className="absolute inset-0 w-full h-full object-cover"
-          src="src\img\hi.mp4" // Make sure hi.mp4 is in public/img/
+          src="/video/hi.mp4" // Make sure hi.mp4 is in public/img/
           autoPlay
           loop
           muted
