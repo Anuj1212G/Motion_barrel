@@ -4,6 +4,7 @@ import { Helmet } from 'react-helmet-async';
 import { Video, Palette, Calendar, GraduationCap, Shield } from 'lucide-react';
 import ServiceCard from '../components/ServiceCard';
 import { useNavigate } from 'react-router-dom';
+
 const Services = () => {
   const navigate = useNavigate(); 
   const [services, setServices] = useState([]);
@@ -18,79 +19,84 @@ const Services = () => {
     shield: Shield,
   };
 
-  // Mock services data
-const mockServices = [
-  {
-    _id: '1',
-    title: 'Corporate & Brand Videos',
-    description:
-      'Impactful video productions that build trust, highlight your company’s strengths, and communicate your brand story with clarity.',
-    icon: 'video',
-    features: [
-      'Executive interviews & testimonials',
-      'Company profile storytelling',
-      'Customer success stories',
-      'Brand awareness campaigns',
-    ],
-    pricing: 'Starting from $5,000',
-  },
-  {
-    _id: '2',
-    title: 'Training & Safety Animations',
-    description:
-      'Engaging 2D/3D animations designed to train teams effectively and reinforce critical safety practices across operations.',
-    icon: 'graduation-cap',
-    features: [
-      'Process safety training modules',
-      'Compliance & regulation visuals',
-      'Interactive learning content',
-      'Incident prevention guides',
-    ],
-    pricing: 'Starting from $3,000',
-  },
-  {
-    _id: '3',
-    title: 'Product Demos & Explainers',
-    description:
-      'Simplify technical concepts and showcase your products with visuals that are easy to understand and resonate with your audience.',
-    icon: 'palette',
-    features: [
-      'Step-by-step product explainers',
-      'Technical process breakdowns',
-      'Customer education videos',
-      'Product launch campaigns',
-    ],
-    pricing: 'Starting from $2,500',
-  },
-  {
-    _id: '4',
-    title: '3D Motion Graphics',
-    description:
-      'High-precision motion graphics and visualizations that bring complex Oil & Gas systems to life with clarity and depth.',
-    icon: 'calendar',
-    features: [
-      '3D asset design & modeling',
-      'Pipeline & plant visualization',
-      'Engineering process animation',
-      'Immersive technical storytelling',
-    ],
-    pricing: 'Starting from $4,000',
-  },
-  {
-    _id: '5',
-    title: 'Website Design & Digital Campaigns',
-    description:
-      'Stunning websites and digital campaigns that amplify your brand presence and connect you with the right audience.',
-    icon: 'shield',
-    features: [
-      'Custom website design',
-      'Digital marketing campaigns',
-      'SEO & performance optimization',
-      'Cross-platform brand integration',
-    ],
-    pricing: 'Starting from $3,500',
-  },
-];
+  // Mock services data with image
+  const mockServices = [
+    {
+      _id: '1',
+      title: 'Corporate & Brand Videos',
+      description:
+        'Impactful video productions that build trust, highlight your company’s strengths, and communicate your brand story with clarity.',
+      icon: 'video',
+      image: 'src/img/1.png',
+      features: [
+        'Executive interviews & testimonials',
+        'Company profile storytelling',
+        'Customer success stories',
+        'Brand awareness campaigns',
+      ],
+      pricing: 'Starting from $5,000',
+    },
+    {
+      _id: '2',
+      title: 'Training & Safety Animations',
+      description:
+        'Engaging 2D/3D animations designed to train teams effectively and reinforce critical safety practices across operations.',
+      icon: 'graduation-cap',
+      image: 'src/img/2.png',
+      features: [
+        'Process safety training modules',
+        'Compliance & regulation visuals',
+        'Interactive learning content',
+        'Incident prevention guides',
+      ],
+      pricing: 'Starting from $3,000',
+    },
+    {
+      _id: '3',
+      title: 'Product Demos & Explainers',
+      description:
+        'Simplify technical concepts and showcase your products with visuals that are easy to understand and resonate with your audience.',
+      icon: 'palette',
+      image: 'src/img/1.png',
+      features: [
+        'Step-by-step product explainers',
+        'Technical process breakdowns',
+        'Customer education videos',
+        'Product launch campaigns',
+      ],
+      pricing: 'Starting from $2,500',
+    },
+    {
+      _id: '4',
+      title: '3D Motion Graphics',
+      description:
+        'High-precision motion graphics and visualizations that bring complex Oil & Gas systems to life with clarity and depth.',
+      icon: 'calendar',
+      image: 'src/img/4.png',
+      features: [
+        '3D asset design & modeling',
+        'Pipeline & plant visualization',
+        'Engineering process animation',
+        'Immersive technical storytelling',
+      ],
+      pricing: 'Starting from $4,000',
+    },
+    {
+      _id: '5',
+      title: 'Website Design & Digital Campaigns',
+      description:
+        'Stunning websites and digital campaigns that amplify your brand presence and connect you with the right audience.',
+      icon: 'shield',
+      image: 'src/img/5.png',
+      features: [
+        'Custom website design',
+        'Digital marketing campaigns',
+        'SEO & performance optimization',
+        'Cross-platform brand integration',
+      ],
+      pricing: 'Starting from $3,500',
+    },
+  ];
 
   useEffect(() => {
     setServices(mockServices);
@@ -154,6 +160,7 @@ const mockServices = [
                     title={service.title}
                     description={service.description}
                     icon={iconMap[service.icon]}
+                    image={service.image}
                     features={service.features.slice(0, 3)}
                     onClick={() => handleServiceClick(service)}
                   />
@@ -289,7 +296,8 @@ const mockServices = [
 
               <button
                 onClick={() => navigate('/contact')}
-               className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300">
+                className="w-full bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white py-3 px-6 rounded-lg font-semibold transition-all duration-300"
+              >
                 Get Quote for This Service
               </button>
             </motion.div>
