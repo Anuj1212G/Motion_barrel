@@ -56,7 +56,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Your Creative Partner in the Oil & Gas World
+            Our Vision 
             </motion.h1>
             <motion.p
               className="text-lg text-gray-600 max-w-3xl mx-auto mb-8"
@@ -64,9 +64,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              At MotionBarrel, we blend industry insight with creative brilliance to simplify complex ideas. 
-              From high-impact corporate films to immersive 3D animations, we help Oil & Gas companies 
-              communicate with clarity, creativity, and confidence.
+              Our vision is to be a trustworthy global hub for excellent web development and digital solutions where creativity and technology collaborate for growth and innovation. We are seeking to build a future where every idea-how bold the thought may be-might stand into a smooth-scalable and sustainable digital product.
             </motion.p>
             <motion.a
               href="/about"
@@ -91,7 +89,7 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
             >
-              Our Story
+              The Story Behind MotionBarrel
             </motion.h1>
             <motion.p
               className="text-xl text-gray-300 max-w-3xl mx-auto"
@@ -99,8 +97,11 @@ const About = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
             >
-              For over 15 years, we've been at the forefront of Oil & Gas storytelling, 
-              transforming complex industry narratives into compelling visual experiences.
+              MotionBarrel started as a passion project - a vision to merge creativity and
+              technology into solutions that truly make a difference.
+              From my early days of coding experiments to mastering the art, this journey has
+              been fueled by curiosity, problem-solving, and the desire to create meaningful
+              digital experiences.
             </motion.p>
           </div>
         </section>
@@ -116,21 +117,19 @@ const About = () => {
                 viewport={{ once: true }}
               >
                 <h2 className="text-4xl font-bold text-white mb-6">
-                  Bridging Technology & Creativity
+                  Our Mission
                 </h2>
                 <p className="text-gray-300 mb-6 leading-relaxed">
-                  At MotionBarrel, we understand that the Oil & Gas industry demands both technical 
-                  precision and creative storytelling. Our team combines deep industry knowledge 
-                  with innovative production techniques to create content that not only informs 
-                  but inspires.
+                  At MotionBarrel, we intend to develop ideas into potent digital experiences
+                  through innovative, scalable, and user-centric solutions.
                 </p>
                 <p className="text-gray-300 leading-relaxed">
-                  From drilling platforms to renewable energy initiatives, we've documented the 
-                  evolution of energy and helped industry leaders communicate their vision to 
-                  stakeholders, employees, and the world.
+                  We are on the road to empowering individuals, startups, and companies through
+                  creativity and the most recent technology,with which we meet the concrete challenges
+                  of real life with precision, passion, and purpose.
                 </p>
               </motion.div>
-              
+
               <motion.div
                 className="relative"
                 initial={{ opacity: 0, x: 30 }}
@@ -170,18 +169,16 @@ const About = () => {
               {timeline.map((item, index) => (
                 <motion.div
                   key={index}
-                  className={`relative flex items-center mb-12 ${
-                    index % 2 === 0 ? 'justify-start' : 'justify-end'
-                  }`}
+                  className={`relative flex items-center mb-12 ${index % 2 === 0 ? 'justify-start' : 'justify-end'
+                    }`}
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
                   viewport={{ once: true }}
                 >
                   <div
-                    className={`w-1/2 ${
-                      index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'
-                    }`}
+                    className={`w-1/2 ${index % 2 === 0 ? 'pr-8 text-right' : 'pl-8 text-left'
+                      }`}
                   >
                     <div className="bg-slate-700 rounded-lg p-6">
                       <div className="text-orange-500 font-bold text-2xl mb-2">

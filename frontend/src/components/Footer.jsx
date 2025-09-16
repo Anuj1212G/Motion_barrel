@@ -8,19 +8,16 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="col-span-1 md:col-span-2">
-            <Link to="/" className="flex items-center space-x-2 mb-4">
-              <div className="relative">
-                <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-white" />
-                </div>
-                <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full opacity-75"></div>
-              </div>
-              <span className="text-xl font-bold text-white">MotionBarrel</span>
+            <Link to="/" className="flex items-center space-x-3">
+              <img
+                src="/image/logo.png"
+                alt="MotionBarrel Logo"
+               className="h-12 sm:h-28 md:h-28 w-auto object-contain"
+              />
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
-              Where Technology Meets Creativity in Oil & Gas Storytelling. 
-              We create compelling videos, animations, and digital experiences 
-              designed to showcase your brand with impact.
+              Empowering Ideas Through Code and Creativity
+              At MotionBarrel, we craft seamless digital experiences using modern technology to turn bold ideas into powerful, scalable solutions. .
             </p>
             <div className="flex space-x-4">
               <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
@@ -41,7 +38,7 @@ const Footer = () => {
             <ul className="space-y-2">
               {['About', 'Services', 'Portfolio', 'Industries', 'Contact'].map((item) => (
                 <li key={item}>
-                  <Link 
+                  <Link
                     to={`/${item.toLowerCase()}`}
                     onClick={() => window.scrollTo(0, 0)}
                     className="text-gray-400 hover:text-orange-500 transition-colors"

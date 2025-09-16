@@ -23,15 +23,16 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="relative">
-              <div className="w-8 h-8 bg-gradient-to-r from-orange-500 to-orange-600 rounded-lg flex items-center justify-center">
-                <Zap className="w-5 h-5 text-white" />
-              </div>
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-orange-400 rounded-full opacity-75"></div>
-            </div>
-            <span className="text-xl font-bold text-white">MotionBarrel</span>
-          </Link>
+      {/* Logo */}
+<Link to="/" className="flex items-center space-x-3">
+  <img
+    src="/image/logo.png"
+    alt="MotionBarrel Logo"
+    className="h-12 sm:h-28 md:h-28 w-auto object-contain"
+  />
+</Link>
+
+
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

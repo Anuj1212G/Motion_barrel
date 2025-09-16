@@ -91,26 +91,27 @@ const Home = () => {
             transition={{ duration: 1, delay: 0.2 }}
           >
             <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 text-white">
-              Where Technology
+             Empowering Ideas
               <br />
               <span className="bg-gradient-to-r from-orange-500 to-orange-600 bg-clip-text text-transparent">
-                Meets Creativity
+                Through Code 
               </span>
               <br />
-              in Oil & Gas Storytelling.
+             and Creativity.
             </h1>
           </motion.div>
 
-          <motion.p
+           <motion.p
             className="text-xl sm:text-2xl text-gray-200 mb-12 max-w-3xl mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.4 }}
           >
-            Videos, Animations, and Digital Experiences
+           At MotionBarrel, 
             <br />
-            designed to showcase your brand with impact.
+            we craft seamless digital experiences using modern technology to turn bold ideas into powerful, scalable solutions.
           </motion.p>
+
 
           <motion.div
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
