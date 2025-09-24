@@ -153,7 +153,7 @@ const Home = () => {
             className="text-center mb-16"
           >
             <h2 className="text-4xl sm:text-5xl font-bold text-white mb-6">
-              Our Work
+              Our Services
             </h2>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Explore our portfolio of compelling stories that drive results for
@@ -192,7 +192,7 @@ const Home = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             >
-              <span>View All Work</span>
+              <span>Explore All Services</span>
               <ArrowRight className="w-5 h-5" />
             </motion.button>
           </motion.div>
