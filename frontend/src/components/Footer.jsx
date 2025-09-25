@@ -10,9 +10,9 @@ const Footer = () => {
           <div className="col-span-1 md:col-span-2">
             <Link to="/" className="flex items-center space-x-3">
               <img
-                src="/image/logo.png"
+                src="/image/logotemp2.png"
                 alt="MotionBarrel Logo"
-               className="h-12 sm:h-28 md:h-28 w-auto object-contain"
+                className="h-10 sm:h-5 md:h-14 w-auto object-contain"
               />
             </Link>
             <p className="text-gray-400 mb-6 max-w-md">
@@ -20,13 +20,11 @@ const Footer = () => {
               At MotionBarrel, we craft seamless digital experiences using modern technology to turn bold ideas into powerful, scalable solutions. .
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+              <a href="https://in.linkedin.com/in/motion-barrel-259031386 " className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Linkedin className="w-5 h-5" />
               </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
-                <Twitter className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-gray-400 hover:text-orange-500 transition-colors">
+             
+              <a href="https://youtube.com/@motionbarrel?si=f_RyAS1XW09G7366" className="text-gray-400 hover:text-orange-500 transition-colors">
                 <Youtube className="w-5 h-5" />
               </a>
             </div>
@@ -36,7 +34,7 @@ const Footer = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-2">
-              {['About', 'Services', 'Portfolio', 'Industries', 'Contact'].map((item) => (
+              {['About', 'Services', 'Portfolio', 'Testimonials', 'Contact'].map((item) => (
                 <li key={item}>
                   <Link
                     to={`/${item.toLowerCase()}`}
@@ -60,11 +58,11 @@ const Footer = () => {
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <Phone className="w-4 h-4 text-orange-500" />
-                <span>+1 (555) 123-4567</span>
+                <span>+91 6200261265</span>
               </li>
               <li className="flex items-center space-x-3 text-gray-400">
                 <MapPin className="w-4 h-4 text-orange-500" />
-                <span>Houston, TX 77001</span>
+                <span>New Delhi, India</span>
               </li>
             </ul>
           </div>
