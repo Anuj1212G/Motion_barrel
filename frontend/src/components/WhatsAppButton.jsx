@@ -1,19 +1,32 @@
 // src/components/WhatsAppButton.jsx
 import React from "react";
+import { useEffect, useState } from "react";
 
 const WhatsAppButton = () => {
-  const phoneNumber = "916200261265"; // include country code
-  const message = "Hello, I want to know more about your services."; // default pre-filled msg
+  const phoneNumber = "916200261265";
+  const message = "Hello, I want to know more about your services.";
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // Detect mobile
+    setIsMobile(/Mobi|Android/i.test(navigator.userAgent));
+  }, []);
 
   const openWhatsApp = () => {
     const url = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    if (isMobile) {
+      // Mobile: open in new tab
+      window.open(url, "_blank", "noopener,noreferrer");
+    } else {
+      // Desktop: redirect current tab to ensure message appears
+      window.location.href = url;
+    }
   };
 
   return (
     <button
       onClick={openWhatsApp}
-      className="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 shadow-2xl flex items-center justify-center transition-transform duration-300 z-50 animate-bounce-glow"
+      className="fixed bottom-6 right-6 w-16 h-16 rounded-full bg-green-500 hover:bg-green-600 shadow-2xl flex items-center justify-center transition-transform duration-300 z-50 transform translate-x-20 animate-slide-in"
       title="Chat on WhatsApp"
     >
       <img
@@ -22,6 +35,20 @@ const WhatsAppButton = () => {
         className="w-9 h-9 object-contain"
       />
       <style jsx>{`
+        @keyframes slide-in {
+          0% {
+            transform: translateX(80px) translateY(0);
+            opacity: 0;
+          }
+          100% {
+            transform: translateX(0) translateY(0);
+            opacity: 1;
+          }
+        }
+        .animate-slide-in {
+          animation: slide-in 0.6s ease-out forwards;
+        }
+
         @keyframes bounce-glow {
           0%, 100% {
             transform: translateY(0);
