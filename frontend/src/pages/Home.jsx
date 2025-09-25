@@ -199,33 +199,65 @@ const Home = () => {
         </div>
       </section>
 
-      {/* STATS SECTION */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
-            {[
-              { number: '250+', label: 'Projects Completed' },
-              { number: '98%', label: 'Client Satisfaction' },
-              { number: '15+', label: 'Years Experience' },
-              { number: '50+', label: 'Industry Partners' },
-            ].map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                viewport={{ once: true }}
-              >
-                <div className="text-4xl sm:text-5xl font-bold text-orange-500 mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-gray-300 font-medium">{stat.label}</div>
-              </motion.div>
-            ))}
+{/* TECH STACK SECTION */}
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-800 overflow-hidden">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-center text-3xl font-bold text-white mb-10">
+      Our Tech Stack
+    </h2>
+
+    {/* Visible window with only 4 logos */}
+    <div className="relative overflow-hidden mx-auto w-[650px]"> 
+      <div className="marquee flex items-center gap-12">
+        {/* Repeat logos twice for seamless loop */}
+        {[...Array(2)].map((_, idx) => (
+          <div key={idx} className="flex items-center gap-12">
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg"
+              alt="MongoDB"
+              className="h-28 w-28 object-contain"
+            />
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/express/express-original.svg"
+              alt="Express.js"
+              className="h-28 w-28 object-contain bg-white rounded p-3"
+            />
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg"
+              alt="React"
+              className="h-28 w-28 object-contain"
+            />
+            <img
+              src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg"
+              alt="Node.js"
+              className="h-28 w-28 object-contain"
+            />
           </div>
-        </div>
-      </section>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  {/* CSS for marquee effect */}
+  <style jsx>{`
+    .marquee {
+      width: max-content;
+      animation: scroll 15s linear infinite;
+    }
+    @keyframes scroll {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  `}</style>
+</section>
+
+
+
+
     </>
   );
 };
