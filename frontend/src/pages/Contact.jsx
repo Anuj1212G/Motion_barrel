@@ -9,12 +9,12 @@ const Contact = () => {
     {
       icon: MapPin,
       title: 'Visit Us',
-      details: ['1234 Energy Corridor', 'Houston, TX 77001', 'United States']
+      details: ['New Delhi,', 'India']
     },
     {
       icon: Phone,
       title: 'Call Us',
-      details: ['+1 (555) 123-4567', '+1 (555) 987-6543', 'Mon-Fri 9AM-6PM CST']
+      details: ['+91 6200261265', 'Mon-Fri 9AM-6PM IST']
     },
     {
       icon: Mail,
@@ -101,6 +101,7 @@ const Contact = () => {
               </motion.div>
 
               {/* Map */}
+             {/* Map */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -109,26 +110,30 @@ const Contact = () => {
               >
                 <div className="bg-slate-800 rounded-xl p-8 h-full">
                   <h3 className="text-2xl font-bold text-white mb-4">Find Us</h3>
-                  <div className="bg-slate-700 rounded-lg h-80 flex items-center justify-center mb-6">
-                    <div className="text-center">
-                      <MapPin className="w-12 h-12 text-orange-500 mx-auto mb-2" />
-                      <p className="text-gray-400">Interactive map would be embedded here</p>
-                      <p className="text-sm text-gray-500 mt-2">
-                        Houston Energy Corridor<br />
-                        Houston, TX 77001
-                      </p>
-                    </div>
+
+                  {/* Embedded Google Map */}
+                  <div className="rounded-lg overflow-hidden h-80 mb-6">
+                    <iframe
+                      title="New Delhi Location"
+                      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d175671.5958596667!2d77.089949!3d28.613895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03e1e6e1c2b3%3A0x3e7b1c09a0e5c3b3!2sNew%20Delhi%2C%20Delhi%2C%20India!5e0!3m2!1sen!2sus!4v1706136848117!5m2!1sen!2sus"
+                      width="100%"
+                      height="100%"
+                      style={{ border: 0 }}
+                      allowFullScreen=""
+                      loading="lazy"
+                      referrerPolicy="no-referrer-when-downgrade"
+                    ></iframe>
                   </div>
                   
                   {/* Quick Contact */}
                   <div className="space-y-4">
                     <h4 className="text-lg font-semibold text-white">Quick Contact</h4>
                     <a 
-                      href="tel:+15551234567"
+                      href="tel:+916200261265"
                       className="flex items-center space-x-3 text-gray-300 hover:text-orange-500 transition-colors"
                     >
                       <Phone className="w-5 h-5" />
-                      <span>+1 (555) 123-4567</span>
+                      <span>+91 6200261265</span>
                     </a>
                     <a 
                       href="mailto:info@motionbarrel.com"
@@ -136,15 +141,6 @@ const Contact = () => {
                     >
                       <Mail className="w-5 h-5" />
                       <span>info@motionbarrel.com</span>
-                    </a>
-                    <a 
-                      href="https://wa.me/15551234567"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="flex items-center space-x-3 text-gray-300 hover:text-orange-500 transition-colors"
-                    >
-                      <MessageCircle className="w-5 h-5" />
-                      <span>WhatsApp Chat</span>
                     </a>
                   </div>
                 </div>
