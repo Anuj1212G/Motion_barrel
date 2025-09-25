@@ -125,35 +125,50 @@ const Testimonials = () => {
           </motion.p>
         </section>
 
-        {/* Testimonials Grid */}
-        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900">
-          <div className="max-w-7xl mx-auto grid gap-10 md:grid-cols-2 lg:grid-cols-3">
-            {testimonials.map((t, index) => (
-              <motion.div
-                key={index}
-                className="bg-slate-800 p-8 rounded-2xl shadow-xl text-center"
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <img
-                  src={t.image}
-                  alt={t.name}
-                  className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-orange-500 object-cover"
-                />
-                <h3 className="text-xl font-bold text-white">{t.name}</h3>
-                <p className="text-orange-400 mb-4">{t.role}</p>
-                <p className="text-gray-300 italic mb-4">“{t.feedback}”</p>
-                <div className="flex justify-center space-x-1 text-orange-500">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-5 h-5 fill-current" />
-                  ))}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </section>
+<section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-900 overflow-hidden">
+  <h2 className="text-center text-3xl font-bold text-white mb-12">
+    Our Global Partners
+  </h2>
+
+  <div className="relative overflow-hidden">
+    {/* Scrolling track */}
+    <div className="flex animate-scroll gap-10">
+      {[...testimonials, ...testimonials].map((t, idx) => (
+        <div
+          key={idx}
+          className="min-w-[200px] bg-slate-800 p-6 rounded-2xl text-center shadow-xl transform transition-transform duration-300 hover:scale-105 hover:shadow-orange-500"
+        >
+          <img
+            src={t.image}
+            alt={t.name}
+            className="w-24 h-24 mx-auto mb-4 object-contain rounded-full"
+          />
+          <h3 className="text-white font-semibold">{t.name}</h3>
+          <p className="text-orange-400 text-sm">{t.role}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <style jsx>{`
+    .animate-scroll {
+      display: flex;
+      gap: 2.5rem;
+      width: max-content;
+      animation: scroll 30s linear infinite;
+    }
+    @keyframes scroll {
+      from {
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+  `}</style>
+</section>
+
+
 
         {/* CTA Section */}
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-orange-500 to-orange-600 text-center">
