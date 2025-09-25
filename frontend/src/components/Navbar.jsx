@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Menu, X, Zap } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,28 +11,25 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     { name: 'Services', path: '/services' },
     { name: 'Portfolio', path: '/portfolio' },
-    { name: 'Testimonals', path: '/industries' },
+    { name: 'Testimonials', path: '/industries' },
     { name: 'Contact', path: '/contact' }
   ];
 
-  // Removed TypeScript annotation ": string"
   const isActive = (path) => location.pathname === path;
 
   return (
     <nav className="fixed top-0 w-full z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-16 md:h-20">
+          
           {/* Logo */}
-      {/* Logo */}
-<Link to="/" className="flex items-center space-x-3">
-  <img
-    src="/image/logo.png"
-    alt="MotionBarrel Logo"
-    className="h-12 sm:h-28 md:h-28 w-auto object-contain"
-  />
-</Link>
-
-
+          <Link to="/" className="flex items-center">
+            <img
+              src="/image/logotemp2.png"
+              alt="MotionBarrel Logo"
+              className="h-12 md:h-16 w-auto object-contain"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
